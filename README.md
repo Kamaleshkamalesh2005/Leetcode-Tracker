@@ -1,141 +1,259 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+```markdown
+# Leetcode-Tracker
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+[![Repo Size](https://img.shields.io/github/repo-size/Kamaleshkamalesh2005/Leetcode-Tracker)](https://github.com/Kamaleshkamalesh2005/Leetcode-Tracker)
+[![License](https://img.shields.io/github/license/Kamaleshkamalesh2005/Leetcode-Tracker)](https://github.com/Kamaleshkamalesh2005/Leetcode-Tracker/blob/main/LICENSE)
+[![Issues](https://img.shields.io/github/issues/Kamaleshkamalesh2005/Leetcode-Tracker)](https://github.com/Kamaleshkamalesh2005/Leetcode-Tracker/issues)
 
-## ✨ Technology Stack
+Leetcode-Tracker is a lightweight, practical tool to log and analyze your LeetCode problem-solving progress. It stores problem entries (title, URL, difficulty, tags, language used, time spent, notes, and date solved) and provides summary statistics and export/import capabilities. The repository is intended as a personal tracker or starter template for a web/CLI app.
 
-This scaffold provides a robust foundation built with:
-
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
-
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
-
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
-
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
-
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
-
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
-
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
-
-## 🎯 Why This Scaffold?
-
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
-
-## 🚀 Quick Start
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
-
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
-
-## 🤖 Powered by Z.ai
-
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
-
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
-
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
-
-## 📁 Project Structure
-
-```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
-```
-
-## 🎨 Available Features & Components
-
-This scaffold includes a comprehensive set of modern web development tools:
-
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
-
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
-
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
-
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
-
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
-
-## 🤝 Get Started with Z.ai
-
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+Table of contents
+- About
+- Features
+- Data model
+- Tech & tools (with images)
+- File / folder overview
+- Installation — download & run
+- Basic usage examples
+- Export / Import / Backup
+- Customization & extensions
+- Contributing
+- Troubleshooting
+- License & contact
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+About
+-----
+Leetcode-Tracker helps you:
+- Keep a searchable, filterable log of solved LeetCode problems.
+- Track time spent, languages used, and tags for each problem.
+- See quick stats (counts by difficulty, languages, streaks).
+- Export or back up your records in JSON/CSV.
+
+It is intentionally minimal and opinionated so you can extend or embed it into larger workflows.
+
+Key features
+------------
+- Add / edit / delete problem entries
+- Filter by difficulty, tags, language, date range
+- Summary statistics and simple reports
+- CSV and JSON export/import
+- Local storage (JSON/SQLite) or optional DB backend
+- Easy to extend to a web dashboard, mobile client or hosted service
+
+Data model (example)
+--------------------
+Each entry represents a solved problem. Minimal example schema:
+
+- id: uuid or integer
+- title: "Two Sum"
+- url: "https://leetcode.com/problems/two-sum"
+- platform: "LeetCode"
+- difficulty: "Easy" | "Medium" | "Hard"
+- tags: ["array", "hash-table"]
+- language: "Python"
+- time_spent_minutes: 15
+- notes: "Used hash map to get O(n) solution"
+- solved_date: "2025-10-12"
+
+Tech & tools (logos)
+--------------------
+The project can be implemented with various stacks. Below are common tools used when developing or running this tracker.
+
+- GitHub (version control)
+  ![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+
+- Git (local version control)
+  ![Git Logo](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png)
+
+- Python (backend / CLI)
+  ![Python Logo](https://raw.githubusercontent.com/github/explore/main/topics/python/python.png)
+
+- Node.js / JavaScript (backend / full-stack)
+  ![Node.js Logo](https://raw.githubusercontent.com/github/explore/main/topics/nodejs/nodejs.png)
+
+- SQLite (local DB option)
+  ![SQLite Logo](https://upload.wikimedia.org/wikipedia/commons/6/6a/SQLite_format.svg)
+
+- VS Code (recommended editor)
+  ![VS Code Logo](https://code.visualstudio.com/assets/images/code-stable.png)
+
+Screenshots
+-----------
+Place screenshots in `assets/` or `docs/` and reference them here. Example placeholders:
+
+![Dashboard placeholder](assets/dashboard.png)
+![Add entry placeholder](assets/add-entry.png)
+
+(Replace the placeholders with real screenshots after you run the app.)
+
+Repository structure (recommended)
+----------------------------------
+A typical structure for this project:
+
+- README.md                 — this file
+- LICENSE
+- requirements.txt / package.json
+- app.py / server.js         — main app or CLI entrypoint
+- cli.py                    — optional CLI commands
+- db.sqlite                 — optional local DB file (gitignored)
+- data/entries.json         — JSON storage (alternative)
+- assets/                   — images/screenshots
+- docs/                     — additional documentation
+- scripts/init_db.py        — DB initialization helper
+- tests/                    — unit / integration tests
+
+Installation — Downloading the project
+--------------------------------------
+Choose one of the following methods:
+
+1) Clone with Git (recommended)
+```bash
+git clone https://github.com/Kamaleshkamalesh2005/Leetcode-Tracker.git
+cd Leetcode-Tracker
+```
+
+2) GitHub CLI
+```bash
+gh repo clone Kamaleshkamalesh2005/Leetcode-Tracker
+cd Leetcode-Tracker
+```
+
+3) Download ZIP via browser
+- Visit: https://github.com/Kamaleshkamalesh2005/Leetcode-Tracker
+- Click "Code" → "Download ZIP"
+- Unzip locally and open the folder.
+
+Quick start (examples)
+----------------------
+Below are two typical setups. Use the one matching your implementation.
+
+A) If the project is a Python CLI or Flask app
+1. Create a virtual environment:
+```bash
+python3 -m venv venv
+# macOS / Linux
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
+```
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+3. Initialize database (if applicable):
+```bash
+python scripts/init_db.py
+```
+4. Run the app:
+```bash
+python app.py
+# or for a Flask app
+flask run
+```
+
+B) If the project is Node.js / React
+1. Install dependencies:
+```bash
+npm install
+# or
+yarn
+```
+2. Start backend (if separated):
+```bash
+cd server
+npm start
+```
+3. Start frontend:
+```bash
+cd client
+npm start
+```
+4. Open http://localhost:3000 (or the port shown in the console).
+
+Basic usage examples
+--------------------
+- Add an entry (CLI example)
+```bash
+python cli.py add \
+  --title "Two Sum" \
+  --url "https://leetcode.com/problems/two-sum" \
+  --difficulty "Easy" \
+  --tags "array,hash-table" \
+  --language "Python" \
+  --time 15 \
+  --notes "Solved with hash map"
+```
+
+- List entries
+```bash
+python cli.py list --limit 50 --sort solved_date:desc
+```
+
+- Export to CSV
+```bash
+python cli.py export --format csv --output my_leetcode_log.csv
+```
+
+- Generate stats
+```bash
+python cli.py stats --by difficulty
+```
+
+Export / Import / Backup
+------------------------
+- Export formats: CSV (spreadsheet-friendly) and JSON (structured).
+- Import: provide a JSON/CSV matching the repository schema. A small import script can map column names to fields.
+- Backup: save a copy of `db.sqlite` or `data/entries.json` and keep it under your personal storage or cloud drive.
+
+Customization & extension ideas
+-------------------------------
+- Add charts: Chart.js (web) or matplotlib/plotly (Python) for visual progress.
+- Authentication: add user accounts and sync to a remote DB.
+- Integrations: fetch problem metadata from LeetCode API / scrapers.
+- Mobile: build a simple mobile app to add entries on the go.
+- Sharing: export sharable summaries for friends or portfolio.
+
+Contributing
+------------
+Contributions are welcome. Suggested workflow:
+1. Fork the repository.
+2. Create a feature branch:
+```bash
+git checkout -b feature/add-export
+```
+3. Implement changes and tests.
+4. Commit and push:
+```bash
+git commit -am "Add CSV export"
+git push origin feature/add-export
+```
+5. Open a Pull Request to this repository.
+
+Please follow code style, write tests for non-trivial logic, and update README when adding features.
+
+Troubleshooting
+---------------
+- Missing dependencies: confirm you ran `pip install -r requirements.txt` or `npm install`.
+- DB errors: verify DB path, permissions, and whether an initialization script exists.
+- Port conflicts: change the default port or stop conflicting processes.
+- If the CLI fails, run with `--verbose` or inspect logs under `logs/` (if implemented).
+
+License
+-------
+See the LICENSE file in the repository root. If none exists, consider using the MIT license for a permissive option.
+
+Contact
+-------
+Repository owner: Kamaleshkamalesh2005  
+GitHub: https://github.com/Kamaleshkamalesh2005
+
+---
+
+Notes for maintainers
+- Add real screenshots to `assets/` and update the image links above.
+- If your implementation uses a specific entry point (app.py, server.js, cli.py), update the Quick start section with exact commands.
+- Add automated tests and a CI workflow for reliability.
+
+```
