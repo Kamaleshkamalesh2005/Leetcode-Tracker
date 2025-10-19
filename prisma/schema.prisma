@@ -1,0 +1,100 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  role      Role     @default(STUDENT)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  student   Student?
+  
+  @@map("users")
+}
+
+model Student {
+  id               String   @id @default(cuid())
+  name             String
+  leetcodeUsername String   @unique
+  easySolved       Int      @default(0)
+  mediumSolved     Int      @default(0)
+  hardSolved       Int      @default(0)
+  score            Int      @default(0)
+  lastUpdated      DateTime @default(now())
+  submissionCalendar String? // JSON string storing submission calendar data
+  isActive         Boolean  @default(true)
+  
+  // Relations
+  userId           String?  @unique
+  user             User?    @relation(fields: [userId], references: [id])
+  
+  homeworkStatus   HomeworkStatus[]
+  
+  @@map("students")
+}
+
+model Homework {
+  id           String     @id @default(cuid())
+  title        String
+  link         String
+  difficulty   Difficulty
+  assignedBy   String
+  dueDate      DateTime
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  
+  // Relations
+  homeworkStatus HomeworkStatus[]
+  
+  @@map("homework")
+}
+
+model HomeworkStatus {
+  id         String           @id @default(cuid())
+  status     HomeworkStatusType @default(NOT_SOLVED)
+  solvedAt   DateTime?
+  createdAt  DateTime         @default(now())
+  updatedAt  DateTime         @updatedAt
+  
+  // Relations
+  studentId  String
+  student    Student          @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  
+  homeworkId String
+  homework   Homework         @relation(fields: [homeworkId], references: [id], onDelete: Cascade)
+  
+  @@unique([studentId, homeworkId])
+  @@map("homework_status")
+}
+
+enum Role {
+  STUDENT
+  TEACHER
+  ADMIN
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum HomeworkStatusType {
+  NOT_SOLVED
+  SOLVED
+}
